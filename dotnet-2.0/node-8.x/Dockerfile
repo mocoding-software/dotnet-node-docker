@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.7-runtime-stretch
+FROM microsoft/dotnet:2.0.7-runtime
 
 # Install NodeJS 
 RUN apt-get update
