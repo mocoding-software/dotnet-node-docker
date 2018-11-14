@@ -1,0 +1,10 @@
+FROM microsoft/dotnet:2.1.6-aspnetcore-runtime
+
+# Install NodeJS 
+RUN apt-get update
+RUN apt-get -y install gnupg2
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get install -y nodejs
+
+ENV ASPNETCORE_URLS http://+:80
+EXPOSE 80
