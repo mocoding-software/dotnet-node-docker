@@ -10,11 +10,11 @@
 ## Build Process
 ```sh
 # run on PC/Mac
-docker build --tag mocoding/dotnet-node:2.2-10.x-amd64
+docker build --tag mocoding/dotnet-node:2.2-10.x-amd64 .
 docker login && docker push mocoding/dotnet-node:2.2-10.x-amd64
 # run on Raspberry Pi
-docker build --tag mocoding/dotnet-node:2.2-10.x-arm32v7
-docker login && docker push mocoding/dotnet-node:2.2-10.x-amd64
+docker build --tag mocoding/dotnet-node:2.2-10.x-arm32v7 .
+docker login && docker push mocoding/dotnet-node:2.2-10.x-arm32v7
 
 # run on PC/Mac
 docker manifest create mocoding/dotnet-node:2.2-10.x mocoding/dotnet-node:2.2-10.x-arm32v7 mocoding/dotnet-node:2.2-10.x-amd64
