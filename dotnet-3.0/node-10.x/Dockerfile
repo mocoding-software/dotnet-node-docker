@@ -1,0 +1,10 @@
+FROM  mcr.microsoft.com/dotnet/core/aspnet:3.0
+
+# Install NodeJS 
+RUN apt-get update
+RUN apt-get -y install gnupg2
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get install -y nodejs
+
+ENV ASPNETCORE_URLS http://+:80
+EXPOSE 80
