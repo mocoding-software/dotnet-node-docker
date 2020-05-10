@@ -1,6 +1,9 @@
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1.201-alpine3.11
 
+# Install Git
+RUN apk add --no-cache git==2.24.3-r0 openssh==8.1_p1-r0
+
 # Installing Node
 ENV NODE_VERSION=12.16.3     
 
